@@ -1,0 +1,14 @@
+{
+    "name": "axelandre42/user-core-bundle",
+    "description": "Core bundle for my extensible user management system.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandre Waeles",
+            "email": "contact@axelandre42.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

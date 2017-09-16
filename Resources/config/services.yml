@@ -1,0 +1,4 @@
+services:
+#    axelandre42_user_core.example:
+#        class: Axelandre42\User\CoreBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
