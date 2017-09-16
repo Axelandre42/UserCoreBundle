@@ -1,7 +1,9 @@
 {
     "name": "axelandre42/user-core-bundle",
     "description": "Core bundle for my extensible user management system.",
+	"version": "1.0.0-dev",
     "type": "library",
+	"keywords": ["user", "management", "symfony", "bundle", "core"],
     "license": "MIT",
     "authors": [
         {
@@ -9,6 +11,11 @@
             "email": "contact@axelandre42.net"
         }
     ],
+	"support": {
+		"email": "contact@axelandre42.net",
+		"issues": "https://github.com/Axelandre42/UserCoreBundle/issues",
+		"source": "https://github.com/Axelandre42/UserCoreBundle"
+	},
     "minimum-stability": "dev",
     "require": {}
 }
