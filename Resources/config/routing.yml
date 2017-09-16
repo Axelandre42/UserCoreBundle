@@ -1,3 +1,0 @@
-axelandre42_user_core_homepage:
-    path:     /
-    defaults: { _controller: Axelandre42UserCoreBundle:Default:index }
