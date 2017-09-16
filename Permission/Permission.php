@@ -25,27 +25,32 @@ class Permission
 	 * @ORM\Column(type="text")
 	 */
 	private $description;
-	
+
+	// ID, getter.
 	public function getId()
 	{
 		return $this->id;
 	}
-	
+
+	// Name, getter.
 	public function getName()
 	{
 		return $this->name;
 	}
-	
+
+	// Name, setter.
 	public function setName($name)
 	{
 		$this->name = $name;
 	}
-	
+
+	// Description, getter.
 	public function getDescription()
 	{
 		return $this->description;
 	}
-	
+
+	// Description, setter.
 	public function setDescription($description)
 	{
 		$this->description = $description;

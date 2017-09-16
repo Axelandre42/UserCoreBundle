@@ -73,11 +73,13 @@ abstract class AbstractUser implements UserInterface, \Serializable
 	// All roles inherited from groups, getter.
 	public function getGroupsRoles()
     {
-		$array = $this->groups->toArray();
-		$roles = array();
+		$array = $this->groups->toArray(); // Converts groups doctrine ArrayCollection to php array.
+		$roles = array(); // Creates an empty array.
 		
+		// Inspects groups.
 		foreach ($array as $value)
 		{
+			// Merges group's roles to the last merged group roles (starts empty).
 			$roles = array_merge($roles, $value->getRoles());
 		}
 		
@@ -87,19 +89,23 @@ abstract class AbstractUser implements UserInterface, \Serializable
 	// All roles including groups roles and user roles, getter.
     public function getRoles()
     {
+		// Merges both user's and group's roles.
 		return array_merge($this->getUserRoles(), $this->getGroupsRoles());
     }
 
-	// Adds user-specific role, pseudo-setter.
+	// Adds group-specific role, pseudo-setter.
 	public function addRole($role)
 	{
+		// Push role into roles array.
 		array_push($this->roles, $role);
 	}
 
-	// Removes user-specific role, pseudo-setter.
+	// Removes group-specific role, pseudo-setter.
 	public function removeRole($role)
 	{
+		// Search for role in roles array.
 		if(($key = array_search($role, $this->roles)) !== false) {
+			// Unset role.
 			unset($this->roles[$key]);
 		}
 	}

@@ -55,13 +55,16 @@ class Group
 	// Adds group-specific role, pseudo-setter.
 	public function addRole($role)
 	{
+		// Push role into roles array.
 		array_push($this->roles, $role);
 	}
 
 	// Removes group-specific role, pseudo-setter.
 	public function removeRole($role)
 	{
+		// Search for role in roles array.
 		if(($key = array_search($role, $this->roles)) !== false) {
+			// Unset role.
 			unset($this->roles[$key]);
 		}
 	}
@@ -75,13 +78,16 @@ class Group
 	// Adds group-specific permission, pseudo-setter.
 	public function addPermission($permission)
 	{
+		// Push permission into permissions array.
 		array_push($this->permissions, $permission);
 	}
 
 	// Removes group-specific permission, pseudo-setter.
 	public function removePermission($permission)
 	{
+		// Search for permission in permissions array.
 		if(($key = array_search($permission, $this->permissions)) !== false) {
+			// Unset permission.
 			unset($this->permissions[$key]);
 		}
 	}
